@@ -133,24 +133,22 @@ const terms = {
   }
 };
 
-// Заполняем овалы терминами
 document.querySelectorAll('.node.oval').forEach(node => {
   const term = node.getAttribute('data-term');
   if (term && terms[term]) {
     node.childNodes.forEach(child => {
-      if (child.nodeType === 3) node.removeChild(child); // remove text nodes
+      if (child.nodeType === 3) node.removeChild(child);
     });
     node.insertAdjacentText('afterbegin', terms[term].title);
   }
 });
 
-// Модальное окно
+
 const modal = document.getElementById('modal');
 const modalTitle = document.getElementById('modal-title');
 const modalDesc = document.getElementById('modal-desc');
 const closeBtn = document.querySelector('.close-btn');
 
-// Открытие модального окна по клику на овал
 document.querySelectorAll('.node.oval').forEach(node => {
   node.addEventListener('click', () => {
     const term = node.getAttribute('data-term');
@@ -162,7 +160,7 @@ document.querySelectorAll('.node.oval').forEach(node => {
   });
 });
 
-// Закрытие модального окна
+
 closeBtn.addEventListener('click', () => {
   modal.style.display = 'none';
 });
@@ -170,7 +168,7 @@ modal.addEventListener('click', (e) => {
   if (e.target === modal) modal.style.display = 'none';
 });
 
-// --- Плавающие частицы и пузырьки ---
+
 const canvas = document.getElementById('bg-canvas');
 const ctx = canvas.getContext('2d');
 let bubbles = [];
@@ -202,7 +200,7 @@ function createBubble() {
 }
 
 function createParticle() {
-  // Маленькие частицы
+
   return {
     x: Math.random() * canvas.width,
     y: Math.random() * canvas.height,
@@ -229,7 +227,7 @@ function createLine() {
 function drawBubblesAndLines() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-  // Glow lines
+
   for (let l of lines) {
     ctx.save();
     ctx.globalAlpha = l.alpha;
@@ -259,7 +257,7 @@ function drawBubblesAndLines() {
     ctx.restore();
   }
 
-  // Bubbles
+  
   for (let b of bubbles) {
     ctx.beginPath();
     ctx.arc(b.x, b.y, b.r, 0, 2 * Math.PI);
@@ -272,7 +270,7 @@ function drawBubblesAndLines() {
     }
   }
 
-  // Particles
+  
   for (let p of particles) {
     ctx.beginPath();
     ctx.arc(p.x, p.y, p.r, 0, 2 * Math.PI);
@@ -290,13 +288,13 @@ function animate() {
   requestAnimationFrame(animate);
 }
 
-// Инициализация пузырьков, линий и частиц
+
 bubbles = Array.from({length: 22}, createBubble);
 lines = Array.from({length: 7}, createLine);
 particles = Array.from({length: 60}, createParticle);
 animate();
 
-// --- Появление веток при прокрутке ---
+
 const branches = document.querySelectorAll('.branch');
 const observer = new window.IntersectionObserver((entries) => {
   entries.forEach(entry => {
@@ -308,7 +306,7 @@ const observer = new window.IntersectionObserver((entries) => {
 
 branches.forEach(branch => observer.observe(branch));
 
-// --- Кнопка "Вверх" ---
+
 const scrollTopBtn = document.getElementById('scroll-top');
 window.addEventListener('scroll', () => {
   if (window.scrollY > 300) {
@@ -321,13 +319,13 @@ scrollTopBtn.addEventListener('click', () => {
   window.scrollTo({top: 0, behavior: 'smooth'});
 });
 
-// --- Смена темы ---
+
 const themeBtn = document.getElementById('theme-toggle');
 themeBtn.addEventListener('click', () => {
   document.body.classList.toggle('dark');
   localStorage.setItem('irys-theme', document.body.classList.contains('dark') ? 'dark' : 'light');
 });
-// При загрузке — восстановить тему
+
 if (localStorage.getItem('irys-theme') === 'dark') {
   document.body.classList.add('dark');
 }
