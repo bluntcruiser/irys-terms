@@ -57,7 +57,7 @@ const terms = {
   },
   "Iryna": {
     title: "Iryna",
-    desc: ""
+    desc: "AI heart of Irys, weaving together the threads of our community and monitoring contributions to help everyone level up."
   },
   "Node": {
     title: "Node",
