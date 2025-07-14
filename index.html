@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Irys Tree</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="bg-canvas"></canvas>
+  <button id="theme-toggle" title="Switch theme"></button>
+  <button id="scroll-top" title="Scroll to top">↑</button>
+  <div class="header-bar">
+    <a href="https://x.com/irys_xyz" target="_blank" rel="noopener">
+      <img src="irys-logo.png" alt="Irys Logo" class="irys-logo">
+    </a>
+    <span class="header-text">Terms</span>
+  </div>
+  <div id="tree">
+    <div class="vertical-line"></div>
+    <div class="branch left" style="top: 80px;">
+      <div class="branch-line"></div>
+      <div class="node oval" data-term="programmable data"></div>
+      <img class="mascot" src="mascot1.png" alt="mascot1">
+    </div>
+    <div class="branch right" style="top: 300px;">
+      <div class="branch-line"></div>
+      <div class="node oval" data-term="verifiability"></div>
+    </div>
+    <div class="branch left" style="top: 520px;">
+      <div class="branch-line"></div>
+      <div class="node oval" data-term="IrysVM"></div>
+    </div>
+    <div class="branch right" style="top: 740px;">
+      <div class="branch-line"></div>
+      <div class="node oval" data-term="Multi-Ledger Architecture"></div>
+    </div>
+    <div class="branch left" style="top: 960px;">
+      <div class="branch-line"></div>
+      <div class="node oval" data-term="Submit Ledger"></div>
+    </div>
+    <div class="branch right" style="top: 1180px;">
+      <div class="branch-line"></div>
+      <div class="node oval" data-term="Publish Ledger"></div>
+    </div>
+    <div class="branch left" style="top: 1400px;">
+      <div class="branch-line"></div>
+      <div class="node oval" data-term="deshi"></div>
+      <img class="mascot" src="mascot2.png" alt="mascot2">
+    </div>
+    <div class="branch right" style="top: 1620px;">
+      <div class="branch-line"></div>
+      <div class="node oval" data-term="shugo"></div>
+    </div>
+    <div class="branch left" style="top: 1840px;">
+      <div class="branch-line"></div>
+      <div class="node oval" data-term="senshi"></div>
+    </div>
+    <div class="branch right" style="top: 2060px;">
+      <div class="branch-line"></div>
+      <div class="node oval" data-term="shihan"></div>
+      <img class="mascot" src="mascot3.png" alt="mascot3">
+    </div>
+    <div class="branch left" style="top: 2280px;">
+      <div class="branch-line"></div>
+      <div class="node oval" data-term="Hirys"></div>
+    </div>
+    <div class="branch right" style="top: 2500px;">
+      <div class="branch-line"></div>
+      <div class="node oval" data-term="Iryspect"></div>
+    </div>
+    <div class="branch left" style="top: 2720px;">
+      <div class="branch-line"></div>
+      <div class="node oval" data-term="Irysonate"></div>
+    </div>
+    <div class="branch right" style="top: 2940px;">
+      <div class="branch-line"></div>
+      <div class="node oval" data-term="Irysexy"></div>
+    </div>
+    <div class="branch left" style="top: 3160px;">
+      <div class="branch-line"></div>
+      <div class="node oval" data-term="Iryna"></div>
+    </div>
+    <div class="branch right" style="top: 3380px;">
+      <div class="branch-line"></div>
+      <div class="node oval" data-term="Node"></div>
+    </div>
+    <div class="branch left" style="top: 3600px;">
+      <div class="branch-line"></div>
+      <div class="node oval" data-term="Uploader"></div>
+    </div>
+    <div class="branch right" style="top: 3820px;">
+      <div class="branch-line"></div>
+      <div class="node oval" data-term="Bundlr"></div>
+    </div>
+    <div class="branch left" style="top: 4040px;">
+      <div class="branch-line"></div>
+      <div class="node oval" data-term="Gateway"></div>
+    </div>
+    <div class="branch right" style="top: 4260px;">
+      <div class="branch-line"></div>
+      <div class="node oval" data-term="Receipt"></div>
+      <img class="mascot" src="mascot3.png" alt="mascot3">
+    </div>
+    <div class="branch left" style="top: 4480px;">
+      <div class="branch-line"></div>
+      <div class="node oval" data-term="Tag"></div>
+    </div>
+    <div class="branch right" style="top: 4700px;">
+      <div class="branch-line"></div>
+      <div class="node oval" data-term="Chunking"></div>
+    </div>
+    <div class="branch left" style="top: 4920px;">
+      <div class="branch-line"></div>
+      <div class="node oval" data-term="Funding"></div>
+    </div>
+    <div class="branch right" style="top: 5140px;">
+      <div class="branch-line"></div>
+      <div class="node oval" data-term="Manifest"></div>
+    </div>
+    <div class="branch left" style="top: 5360px;">
+      <div class="branch-line"></div>
+      <div class="node oval" data-term="Sprite"></div>
+      <img class="mascot" src="mascot4.png" alt="mascot4">
+    </div>
+    <div class="branch right" style="top: 5580px;">
+      <div class="branch-line"></div>
+      <div class="node oval" data-term="Transaction"></div>
+    </div>
+    <div class="branch left" style="top: 5800px;">
+      <div class="branch-line"></div>
+      <div class="node oval" data-term="Anchor"></div>
+    </div>
+    <div class="branch right" style="top: 6020px;">
+      <div class="branch-line"></div>
+      <div class="node oval" data-term="Balance"></div>
+    </div>
+    <div class="branch left" style="top: 6240px;">
+      <div class="branch-line"></div>
+      <div class="node oval" data-term="Withdrawal"></div>
+    </div>
+    <div class="branch right" style="top: 6460px;">
+      <div class="branch-line"></div>
+      <div class="node oval" data-term="CLI"></div>
+    </div>
+    <div class="branch left" style="top: 6680px;">
+      <div class="branch-line"></div>
+      <div class="node oval" data-term="SDK"></div>
+    </div>
+    <div class="branch right" style="top: 6900px;">
+      <div class="branch-line"></div>
+      <div class="node oval" data-term="Fee"></div>
+    </div>
+    <div class="branch left" style="top: 7120px;">
+      <div class="branch-line"></div>
+      <div class="node oval" data-term="Signature"></div>
+    </div>
+  </div>
+
+  <!-- Модальное окно для описания -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h2 id="modal-title"></h2>
+      <p id="modal-desc"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
